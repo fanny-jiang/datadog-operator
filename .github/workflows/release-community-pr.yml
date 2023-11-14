@@ -38,7 +38,7 @@ jobs:
 
       - name: create PR
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
         run: |
           message="test PR"
           body="test PR"
