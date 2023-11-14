@@ -30,6 +30,12 @@ jobs:
         run: |
           mkdir operators/datadog-operator/test-version
           cp -R ./tmp/bundle/* operators/datadog-operator/test-version
+
+      - name: update git user
+        run: |
+          git config user.name fanny-jiang
+          git config user.email 23389847+fanny-jiang@users.noreply.github.com
+
       - name: create PR
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
