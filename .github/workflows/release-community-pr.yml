@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: sync fork
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
         run: |
           gh repo sync fanny-jiang/community-operators \
           --source k8s-operatorhub/community-operators \
